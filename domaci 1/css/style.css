@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  height: fit-content;
+  width: 300px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 5px;
+  padding: 2rem 1rem;
+  box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.612);
+}
+
+form h3 {
+  text-align: center;
+}
+
+form .btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form .btn-face {
+  padding: .5rem 1.7rem;
+  width: 50%;
+  background: #4a4afb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+
+form .btn-google {
+  padding: .5rem 1.7rem;
+  width: 50%;
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin: 20px 0;
+  margin-left: 20px;
+}
+
+form .input {
+  display: flex;
+  flex-direction: column;
+}
+
+form .input-field {
+  padding: .6rem;
+  margin-bottom: 5px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+form .link-pw, form .link-new-acc {
+  display: block;
+  font-size: .8rem;
+  text-decoration: none;
+  color: grey;
+  text-align: right;
+  font-weight: 100;
+}
+
+form .btn-login {
+  padding: .5rem 1.7rem;
+  width: 50%;
+  background: #792b79;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+form .link-new-acc {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

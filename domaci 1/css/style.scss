@@ -1,0 +1,70 @@
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    height: fit-content;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 5px;
+    padding: 2rem 1rem;
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.612);
+
+    h3 {
+        text-align: center;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-face {
+            @include btns(rgb(74, 74, 251));
+        }
+
+        &-google {
+            @include btns(red);
+            margin-left: 20px;
+        }
+
+    }
+
+    .input {
+        display: flex;
+        flex-direction: column;
+
+        &-field {
+            padding: .6rem;
+            margin-bottom: 5px;
+            border: 1px solid grey;
+            border-radius: 5px;
+        }
+
+    }
+
+    .link-pw {
+        display: block;
+        font-size: .8rem;
+        text-decoration: none;
+        color: grey;
+        text-align: right;
+        font-weight: 100;
+    }
+
+    .btn-login {
+        @include btns(rgb(121, 43, 121));
+        width: 100%;
+    }
+
+    .link-new-acc {
+        @extend .link-pw;
+        text-align: center;
+    }
+
+}
