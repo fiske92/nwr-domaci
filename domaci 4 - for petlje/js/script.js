@@ -11,13 +11,14 @@ function mapirajNiz(nekiNiz) {
 
     let noviNiz = [];
     for(let i = 0; i < nekiNiz.length; i++){
-        nekiNiz[i] = nekiNiz[i] + "IZMENJENO";
-        noviNiz.push(nekiNiz[i]);
+        let noviClan = nekiNiz[i] + "IZMENJENO";
+        noviNiz.push(noviClan);
     }
 
     console.log(noviNiz);
 
 }
+console.log(niz);
 
 mapirajNiz(niz);
 
