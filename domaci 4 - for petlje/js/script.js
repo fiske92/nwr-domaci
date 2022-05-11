@@ -28,14 +28,21 @@ mapirajNiz(prazanNiz);
 ///////////////////////////////////////////////
 
 function zbirOpsega(odBroja, doBroja) {
-    let ukupniZbir = odBroja;
+    if (isNaN(odBroja) || isNaN(doBroja)) {
+        console.log("Parametri moraju biti brojevi")
+    }else if (odBroja >= doBroja) {
+        console.log("Prvi parametar mora biti manji od drugog")
+    } else {
+        let ukupniZbir = odBroja;
     for(let i = (odBroja + 1); i < doBroja; i++) {
         ukupniZbir = ukupniZbir + i;
     }
     console.log(ukupniZbir);
     return ukupniZbir; // return ne vraca, negde gresim ?
+    }
+    
 }
-zbirOpsega(4,7);
+zbirOpsega(3,6);
 
 /////////////////////////////////////////////
 
@@ -43,12 +50,17 @@ let niz1 = [1,2,3];
 let niz2 = [4,5,6];
 
 function myFunction(prviNiz, drugiNiz) {
-    let noviNiz = [];
-     for (let i = 0; i < 3; i++) {
-         let clanNovogNiza = prviNiz[i] + drugiNiz[i];
-         noviNiz.push(clanNovogNiza);
+    if (prviNiz.length != drugiNiz.length) {
+        console.log("Nizovi moraju imati isti broj clanova")
+    } else {
+        let noviNiz = [];
+        for (let i = 0; i < prviNiz.length; i++) {
+            let clanNovogNiza = prviNiz[i] + drugiNiz[i];
+            noviNiz.push(clanNovogNiza);
      }
      console.log(noviNiz)
+    }
+    
 }
 
 myFunction(niz1, niz2);
