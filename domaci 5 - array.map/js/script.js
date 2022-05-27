@@ -42,12 +42,12 @@ polazniciUppercase.forEach(polaznik => {
 
 //? ZADATAK 3 
 
-/* let polazniciString = polaznici.map(polaznik => {
+ let polazniciString = polaznici.map(polaznik => {
     let polaznikString = polaznik.name;
     return polaznikString
 })
 
-console.log(polazniciString); */
+console.log(polazniciString); 
 
 //? ZADATAK 4
 
