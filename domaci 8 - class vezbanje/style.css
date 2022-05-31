@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes boom {
+    from{opacity: 0; transform: scale(1);}
+    to{opacity: 1; transform: scale(3);}
+    
+}
+.boom {
+    visibility: hidden;
+    position: fixed;
+    width: 300px;
+    height: auto;
+}
+
+body {
+    background: whitesmoke;
+}
+
+.race-end { 
+    z-index: -10;
+}
+
+.active-car {
+    background: #fff !important;
+    color: black !important;
+}
+.active-car::before {
+    content: 'SELECTED';
+    border: 1px solid red;
+    font-size: .6rem;
+    display: block;
+}
+.active-car-choose::after {
+    content: 'CHOOSE';
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: .6rem;
+    display: block;
+    width: 100%;
+}
+
+.controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: grey;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .6rem;
+}
+.btn-direction {
+    transition: all .3s;
+    width: 60px;
+    height: 30px;
+    border: none;
+    background: black;
+    margin: .2rem;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.btn-direction:hover {
+    background: coral;
+}
+.btn-up {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-choose-car {
+    padding: .5rem 1.2rem;
+    font-weight: 900;
+    font-size: 1rem;
+    width: fit-content;
+    height: fit-content;
+}
+.btn-choose-car:hover {
+    transform: scale(1.1);
+}
+.my-car {
+    width: 90px;
+    height: 90px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    transform: rotate(180deg);
+    transition: all .5s;
+}
