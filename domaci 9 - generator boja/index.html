@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <main class="bg-stone-50 flex items-center justify-center w-full h-full flex-col">
+        <h1 class="text-2xl mb-2">Random color generator</h1>
+        <p class="text-stone-400">Click button to generate color</p>
+        <button id="generate-color" class="bg-red-500 text-white py-2 px-3 rounded-md mt-5 hover:bg-red-600">Generate</button>
+        <article id="bg-color" class="shadow-lg w-[300px] h-[300px] mt-6 rounded-md flex items-center justify-center">
+            <span id="color">rgb(0,0,0)</span>
+        </article>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
