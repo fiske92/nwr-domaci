@@ -5,6 +5,7 @@ let kurs = document.getElementById("trenutni-kurs").classList;
 let firstInput = document.getElementById('first-input-div')
 let secondInput = document.getElementById('second-input-div')
 let inputContainer = document.getElementById('container')
+
 outputEur.disabled = true
 outputEur.classList.add('cursor-not-allowed')
 
@@ -39,7 +40,7 @@ changeConverter.addEventListener('click', ()=>{
         changeConverter.innerText = '€ u RSD'
         changeConverter.style.transform = 'rotate(360deg)'
         inputContainer.classList.remove('flex-col-reverse')
-        outputEur.setAttribute('placeholder', 'Vrednost € u RSD')
+        outputEur.setAttribute('placeholder', 'Vrednost RSD u €')
         inputRsd.setAttribute('placeholder', 'Unesite iznos u RSD')
         outputEur.classList.add('cursor-not-allowed')
         inputRsd.classList.remove('cursor-not-allowed')
