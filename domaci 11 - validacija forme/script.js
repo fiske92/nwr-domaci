@@ -10,9 +10,6 @@ let backdropSpans = document.getElementsByClassName('spanAlertSuccess') // backd
 let pattern = /[0-9]/; // input-name test if there is a number
 let charMore; // span alert comment - how many char more
 
-let x = 'asdasdas'
-console.log(x.includes('@'))
-
 btnSend.addEventListener("click", () => {
   for (let x of spanAlert) {
     x.innerText = ''
@@ -37,7 +34,12 @@ btnSend.addEventListener("click", () => {
     }
   }
   if (spanAlert[0].innerText == '' && spanAlert[1].innerText == '' && spanAlert[2].innerText == '' && spanAlert[3].innerText == '') {
-    openAlert()
+    for (let alert of alerts) {
+      alert.classList.remove("invisible");
+    }
+    for(let i = 0; i < backdropSpans.length; i++){
+      backdropSpans[i].innerText = inputField[i].value
+    }
   }
 });
 btnClose.addEventListener("click", () => {
@@ -69,13 +71,5 @@ function closeAlert() {
   }
   for (let i = 0; i < inputField.length; i++) {
     inputField[i].value = ''
-  }
-}
-function openAlert() {
-  for (let alert of alerts) {
-    alert.classList.remove("invisible");
-  }
-  for(let i = 0; i < backdropSpans.length; i++){
-    backdropSpans[i].innerText = inputField[i].value
   }
 }
