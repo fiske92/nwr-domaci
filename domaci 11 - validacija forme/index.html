@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="flex items-center justify-center relative">
+    <main class="flex flex-col">
+      <span class="mb-1 text-slate-400">Name </span>
+      <span class="spanAlert text-rose-500 text-sm"></span>
+      <input id="inputName" type="text" class="border p-2 w-[300px] input-field" />
+      <span class="mb-1 text-slate-400 mt-3">Email </span>
+      <span class="spanAlert text-rose-500 text-sm"></span>
+      <input id="inputMail" type="email" class="border p-2 w-[300px] input-field" />
+      <span class="mb-1 text-slate-400 mt-3">Rate *[0-10]</span>
+      <span class="spanAlert text-rose-500 text-sm"></span>
+      <input id="inputRate" type="number" class="border p-2 w-[300px] input-field" />
+      <span class="mb-1 text-slate-400 mt-3">Comment *[min 200 characters] </span>
+      <span class="spanAlert text-rose-500 text-sm"></span>
+      <textarea id="inputTextArea" class="border p-2 w-[300px] input-field"></textarea>
+      <span class="text-slate-400 text-sm">Character number : <input class="w-[40px] bg-transparent transition" id="charCount" disabled></span>
+      <button id="send-comment" class="px-3 py-2 bg-rose-500 text-white w-fit mt-7">Send comment</button>
+    </main>
+    <div class="absolute w-full h-full bg-blue-200 flex justify-center items-center opacity-50 invisible"></div>
+      <div id="alertContainer" class="top-12 border-2 border-white absolute w-[500px] h-fit bg-blue-400 flex flex-col justify-center items-center p-5 rounded-md invisible">
+        <p id='alertHeader' class="text-3xl text-white mb-5 text-lime-300 font-extrabold text-center">You have successfully submitted a comment!</p>
+        <span class="text-white text-xl font-black text-lime-200 w-full text-left">Your Name: <span class="spanAlertSuccess text-white text-xl"></span></span>
+        <span class="text-white text-xl font-black text-lime-200 w-full text-left">Your Email: <span class="spanAlertSuccess text-white text-xl"></span></span>
+        <span class="text-white text-xl font-black text-lime-200 w-full text-left">Your Rate: <span class="spanAlertSuccess text-white text-xl"></span></span>
+        <span class="text-white text-xl font-black text-lime-200 w-full text-left">Your Comment:</span>
+        <span class="spanAlertSuccess text-white text-xl text-center"></span>
+        <button id="closeAlert" class="mt-5 bg-blue-600 text-white px-3 py-1 border border-white rounded-md hover:bg-blue-500 transition">Zatvori</button>
+      </div>
+    <script src="script.js"></script>
+  </body>
+</html>
