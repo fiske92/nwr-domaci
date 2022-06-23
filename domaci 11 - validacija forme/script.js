@@ -27,6 +27,7 @@ btnSend.addEventListener("click", () => {
   if (inputField[3].value == "" || inputField[3].value.length < 200) {
     if(inputField[3].value.length < 200){
       charMore = 200 - inputField[3].value.length
+      charCount.value = inputField[3].value.length;
       spanAlert[3].innerText = `(Add ${charMore} char more)`
       charCount.style.transform = 'scale(2) translateX(10px)'
       charCount.style.color = 'red'
