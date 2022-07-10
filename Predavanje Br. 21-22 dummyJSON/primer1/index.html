@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50">
+
+    <div class="container mx-auto mt-10 mb-10">
+        <div class="grid grid-cols-4 gap-4 ">
+            <div id="categoryContainer" class="flex-0 bg-white border min-h-[30%] h-fit p-5">
+                <h2 class="font-medium uppercase mb-3">Categories</h2>
+            </div>
+            <div class="col-span-3">
+                <main id="all-products" class="grid gap-4 grid-cols-2 sm:grid-cols-4 col-span-3">
+                </main>
+                <div class="flex mt-3">
+                    <div id="arrow-prev" class="mr-2 cursor-pointer p-2 bg-white border flex items-center justify-center w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                    </div>
+                    <div id="arrow-next" class="p-2 cursor-pointer bg-white border flex items-center justify-center w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- * Product details popup -->
+    <div id="product-popup" class="hidden w-screen bg-[#00000061] h-screen bg-black-50 fixed z-50 top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] flex items-center justify-center">
+        <section class="shadow bg-white w-[80vw] min-h-[40vh]">
+            <div class="flex justify-between p-4 border-b">
+                <h3>Single product</h3>
+                <div id="close-popup" class="cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </div>
+            </div>
+            <div class="p-4">
+                Ovde ide sadrzaj...
+            </div>
+        </section>
+    </div>
+
+    
+    <script src="./script.js"></script>
+</body>
+</html>

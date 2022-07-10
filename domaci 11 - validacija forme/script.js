@@ -7,7 +7,7 @@ let btnClose = document.getElementById("closeAlert"); // close backdrop
 let alerts = document.getElementsByClassName("absolute"); // backdrop divs
 let backdropSpans = document.getElementsByClassName('spanAlertSuccess') // backdrop dialog spans
 
-let pattern = /[0-9]/; // input-name test if there is a number
+let pattern = /[0-9]/; // pattern for input-name test if there is a number
 let charMore; // span alert comment - how many char more
 
 btnSend.addEventListener("click", () => {
@@ -15,15 +15,16 @@ btnSend.addEventListener("click", () => {
     x.innerText = ''
   }
   charCount.value = ''
+
   if (inputField[0].value == "" || pattern.test(inputField[0].value)) {
     spanAlert[0].innerText = "(Please fill in the Name field correctly)"
-  } 
+  }
   if (!inputField[1].value.includes("@") || inputField[1].value == "") {
     spanAlert[1].innerText = "(Please fill in the Mail field correctly)"
   } 
   if (inputField[2].value < 0 || inputField[2].value > 10 || inputField[2].value == "") {
     spanAlert[2].innerText = "Please fill in the Rate with number between 1 - 10"
-  } 
+  }
   if (inputField[3].value == "" || inputField[3].value.length < 200) {
     if(inputField[3].value.length < 200){
       charMore = 200 - inputField[3].value.length
@@ -34,6 +35,8 @@ btnSend.addEventListener("click", () => {
       setTimeout(function(){charCount.style.transform = 'scale(1)'; charCount.style.color = 'grey'}, 300)
     }
   }
+
+  // if all alerts is empty, validation is successfully
   if (spanAlert[0].innerText == '' && spanAlert[1].innerText == '' && spanAlert[2].innerText == '' && spanAlert[3].innerText == '') {
     for (let alert of alerts) {
       alert.classList.remove("invisible");
@@ -43,12 +46,16 @@ btnSend.addEventListener("click", () => {
     }
   }
 });
+
 btnClose.addEventListener("click", () => {
   closeAlert();
 });
+
 alerts[0].addEventListener("click", () => {
   closeAlert();
 });
+
+// input comment char counter
 inputField[3].addEventListener("input", () => {
   charCount.value = inputField[3].value.length;
   if (inputField[3].value.length >= 200) {
@@ -66,6 +73,7 @@ inputField[3].addEventListener("input", () => {
   }
 
 });
+
 function closeAlert() {
   for (let alert of alerts) {
     alert.classList.add("invisible");
